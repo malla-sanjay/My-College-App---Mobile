@@ -1,6 +1,5 @@
 import React from "react";
 import { useContext } from "react";
-import { EventRegister } from "react-native-event-listeners";
 import AppContext from "../AppContext";
 import { useState, useEffect } from "react";
 import { View, Text, StyleSheet, ScrollView, Picker } from "react-native";
@@ -51,7 +50,7 @@ const Schedules = ({ college_id }) => {
     fetchGroups();
   }, [college_id]);
 
-  //classes
+  //classes cards rendered
   const renderCards = () => {
     let filteredClasses = classes;
     if (selectedGroup !== "ALL") {
@@ -62,6 +61,8 @@ const Schedules = ({ college_id }) => {
         (c) => c.dayOfWeek === selectedDay
       );
     }
+
+    //card filteration
     return filteredClasses.map((c) => (
       <View
         key={c.id}

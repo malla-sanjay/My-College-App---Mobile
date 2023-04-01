@@ -1,16 +1,15 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import React from "react";
 import { useState, useContext } from "react";
-import { EventRegister } from "react-native-event-listeners";
 import AppContext from "../AppContext";
 import { useEffect } from "react";
 
 const Events = ({ college_id }) => {
-  //const { college_id } = route.params;
   const theme = useContext(AppContext);
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
+    //events for targeted college id
     const fetchEvents = async () => {
       try {
         const response = await fetch(

@@ -6,7 +6,7 @@ import Schedules from "./screen/Schedules";
 const tab = createMaterialBottomTabNavigator();
 import { EventRegister } from "react-native-event-listeners";
 import { useState, useEffect } from "react";
-import { DefaultTheme, DarkTheme } from "@react-navigation/native";
+import { DefaultTheme } from "@react-navigation/native";
 import theme from "./theme/theme";
 import AppContext from "./AppContext";
 
